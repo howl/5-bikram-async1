@@ -102,3 +102,31 @@ const getAndPrintGitHubUserProfile = async (username) => {
     console.log(error);
   }
 };
+
+/* Ejercicio 8 */
+const createGitHubUserFindForm = () => {
+  const form = document.createElement('form');
+  const inputLabel = document.createElement('label');
+  const input = document.createElement('input');
+  const button = document.createElement('input');
+
+  inputLabel.setAttribute('for', 'input');
+  inputLabel.appendChild(document.createTextNode('Nombre de usuario: '));
+  input.id = 'input';
+  button.id = 'button';
+  button.value = 'Buscar usuario';
+  button.type = 'submit';
+
+  form.append(inputLabel, input, button);
+  document.body.prepend(form);
+
+  return form;
+};
+
+document.addEventListener('DOMContentLoaded', (ev) => {
+  createGitHubUserFindForm().addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const profile = await getAndPrintGitHubUserProfile(ev.target.input.value);
+    console.log(profile);
+  });
+});

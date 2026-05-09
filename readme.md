@@ -43,7 +43,7 @@ Utiliza la API (https://dog.ceo/dog-api/) para resolver estos ejercicios.
 </section>
 ```
 
-- [ ] 8.- Manipulación del DOM: Crea un input de tipo texto, y un botón buscar. El usuario escribirá en el input el nombre de usuario de GitHub que quiera buscar. Después llamaremos a la función **getAndPrintGitHubUserProfile(username)** que se ejecute cuando se pulse el botón buscar.(Esto no se testea).
+- [x] 8.- Manipulación del DOM: Crea un input de tipo texto, y un botón buscar. El usuario escribirá en el input el nombre de usuario de GitHub que quiera buscar. Después llamaremos a la función **getAndPrintGitHubUserProfile(username)** que se ejecute cuando se pulse el botón buscar.(Esto no se testea).
 
 
 ### GitHub API (II)- Promesas, promesas y más promesas ###
