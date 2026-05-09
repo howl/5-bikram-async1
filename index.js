@@ -66,3 +66,20 @@ const getGitHubUserProfile = async (username) => {
     console.log(error);
   }
 };
+
+/* Ejercicio 6 */
+const printGithubUserProfile = async (username) => {
+  try {
+    const user = await getGitHubUserProfile(username);
+    const userImg = document.createElement('img');
+    const userNameP = document.createElement('p');
+
+    userImg.src = user.avatar_url;
+    userImg.alt = `Avatar en GitHub de ${user.login}`;
+    userNameP.appendChild(document.createTextNode(user.name));
+
+    return { img: userImg.outerHTML, name: userNameP.innerHTML };
+  } catch (error) {
+    console.log(error);
+  }
+};
