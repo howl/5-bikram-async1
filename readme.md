@@ -23,7 +23,7 @@ Utiliza la API (https://dog.ceo/dog-api/) para resolver estos ejercicios.
 
 - [x] 2.- Declara una función **getRandomDog** que obtenga una imagen random de una raza.
 
-- [ ] 3.- Declara una función **getAllImagesByBreed** que obtenga todas las imágenes de la raza komondor.
+- [x] 3.- Declara una función **getAllImagesByBreed** que obtenga todas las imágenes de la raza komondor.
 
 - [ ] 4.- Declara una funcion **getAllImagesByBreed2(breed)** que devuelva las imágenes de la raza pasada por el argumento
 

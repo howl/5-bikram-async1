@@ -32,3 +32,15 @@ const getRandomDog = async () => {
     console.log(error);
   }
 };
+
+/* Ejercicio 3 */
+const getAllImagesByBreed = async () => {
+  try {
+    const raza = 'komondor';
+    const datos = await consulta(`https://dog.ceo/api/breed/${raza}/images`);
+    if (datos.status !== 'success') throw `Error al extraer las imagenes de la raza ${raza}.`
+    return datos.message;
+  } catch (error) {
+    console.log(error);
+  }
+};
