@@ -21,3 +21,14 @@ const getAllBreeds = async () => {
     console.log(error);
   }
 };
+
+/* Ejercicio 2 */
+const getRandomDog = async () => {
+  try {
+    const datos = await consulta('https://dog.ceo/api/breeds/image/random');
+    if (datos.status !== 'success') throw 'Error al extraer la imagen aleatoria.'
+    return datos.message;
+  } catch (error) {
+    console.log(error);
+  }
+};
