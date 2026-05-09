@@ -55,3 +55,14 @@ const getAllImagesByBreed2 = async (raza) => {
     console.log(error);
   }
 };
+
+/* Ejercicio 5 */
+const getGitHubUserProfile = async (username) => {
+  try {
+    const datos = await consulta(`https://api.github.com/users/${username}`);
+    if (datos.login.toLowerCase() !== username) throw `Error al recoger el perfil del usuario ${username}.`;
+    return datos;
+  } catch (error) {
+    console.log(error);
+  }
+};
