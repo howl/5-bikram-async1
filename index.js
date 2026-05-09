@@ -44,3 +44,14 @@ const getAllImagesByBreed = async () => {
     console.log(error);
   }
 };
+
+/* Ejercicio 4 */
+const getAllImagesByBreed2 = async (raza) => {
+  try {
+    const datos = await consulta(`https://dog.ceo/api/breed/${raza}/images`);
+    if (datos.status !== 'success') throw `Error al extraer las imágenes de la raza ${raza}.`
+    return datos.message;
+  } catch (error) {
+    console.log(error);
+  }
+};

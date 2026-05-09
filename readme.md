@@ -25,7 +25,7 @@ Utiliza la API (https://dog.ceo/dog-api/) para resolver estos ejercicios.
 
 - [x] 3.- Declara una función **getAllImagesByBreed** que obtenga todas las imágenes de la raza komondor.
 
-- [ ] 4.- Declara una funcion **getAllImagesByBreed2(breed)** que devuelva las imágenes de la raza pasada por el argumento
+- [x] 4.- Declara una funcion **getAllImagesByBreed2(breed)** que devuelva las imágenes de la raza pasada por el argumento
 
 ### GitHub API (I) - ¿Quieres saber mi información? Aquí la tienes ###
 
