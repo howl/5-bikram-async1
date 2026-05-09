@@ -2,6 +2,9 @@
 
 # :european_castle: :crossed_swords: Bikram #
 
+## Captura de tests ##
+![captura de los tests](tests.png "captura de los tests")
+
 ## Introducción ##
 Un bikram es una combinación de ejercicios de programación para perfeccionar la conexión entre el programador interior que llevas dentro y el alma del lenguaje de programación. Aprovecha los checkboxes en el enunciado para ir marcando que ejercicios llevas realizados.
 
