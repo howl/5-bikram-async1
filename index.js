@@ -10,6 +10,7 @@ const consulta = async (url) => {
   }
 }
 
+/* Ejercicio 1 */
 const getAllBreeds = async () => {
   try {
     const datos = await consulta('https://dog.ceo/api/breeds/list/all');
