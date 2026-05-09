@@ -83,3 +83,22 @@ const printGithubUserProfile = async (username) => {
     console.log(error);
   }
 };
+
+/* Ejercicio 7 */
+const getAndPrintGitHubUserProfile = async (username) => {
+  try {
+    const user = await getGitHubUserProfile(username);
+    const sectionElement = document.createElement('section');
+    const userImgElement = document.createElement('img');
+    const userNameElement = document.createElement('h1');
+    const userReposElement = document.createElement('p');
+    userImgElement.src = user.avatar_url;
+    userImgElement.alt = user.name;
+    userNameElement.appendChild(document.createTextNode(user.name));
+    userReposElement.appendChild(document.createTextNode(`Public repos: ${user.public_repos}`));
+    sectionElement.append(userImgElement, userNameElement, userReposElement);
+    return sectionElement.outerHTML;
+  } catch (error) {
+    console.log(error);
+  }
+};
