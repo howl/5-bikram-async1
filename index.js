@@ -130,3 +130,22 @@ document.addEventListener('DOMContentLoaded', (ev) => {
     console.log(profile);
   });
 });
+
+/* Ejercicio 9 */
+const getGitHubUserProfileOnlyNameAndUrl = async username => {
+  try {
+    const userProfile = await getGitHubUserProfile(username);
+    if (!userProfile.name || !userProfile.html_url) throw `Fallo al recuperar el perfil del usuario ${username}`;
+    return { name: userProfile.name, html_url: userProfile.html_url };
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const fetchGithubUsers = async usernames => {
+  try {
+    return Promise.all(usernames.map(username => getGitHubUserProfileOnlyNameAndUrl(username)));
+  } catch (error) {
+    console.log(error);
+  }
+};
