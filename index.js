@@ -144,7 +144,9 @@ const getGitHubUserProfileOnlyNameAndUrl = async username => {
 
 const fetchGithubUsers = async usernames => {
   try {
-    return Promise.all(usernames.map(username => getGitHubUserProfileOnlyNameAndUrl(username)));
+    const promesas = Promise.all(usernames.map(username => getGitHubUserProfileOnlyNameAndUrl(username)));
+    (await promesas).forEach(usuario => console.log(`Name: ${usuario.name} , URL: ${usuario.html_url}`));
+    return promesas;
   } catch (error) {
     console.log(error);
   }
